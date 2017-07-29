@@ -1,0 +1,16 @@
+# Latest django
+django
+
+# libs
+django-macros-url
+django-template-names
+
+# cache
+django-clear-cache
+
+# httpd
+waitress
+whitenoise
+
+# Project custom apps
+django-split-settings
