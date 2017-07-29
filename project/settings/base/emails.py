@@ -8,7 +8,7 @@ EMAIL_PORT = 25
 EMAIL_USE_TLS = False
 EMAIL_HOST_PASSWORD = environ.get('SENDGRID_PASSWORD', "")
 
-SERVER_EMAIL = u"{name} <notifications@{domain}>".format(
+SERVER_EMAIL = u"{name} <noreply@{domain}>".format(
     name='',
     domain=HOST,
 )
