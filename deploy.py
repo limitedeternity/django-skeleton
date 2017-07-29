@@ -1,15 +1,9 @@
-# -*- coding: utf-8 -*-
-import subprocess
+from subprocess import call
 
-
-def exec_com(command):
-    command_list = command.split(" ")
-    return subprocess.call(' '.join(command_list), shell=True)
-
-exec_com('git add .')
+call('git add .')
 print("enter your git commit comment: ")
 comment = input()
-exec_com('git commit -am "%s"' % comment)
-exec_com('heroku maintenance:on')
-exec_com('git push heroku master')
-exec_com('heroku maintenance:off')
+call('git commit -am "%s"' % comment)
+call('heroku maintenance:on')
+call('git push heroku master')
+call('heroku maintenance:off')
