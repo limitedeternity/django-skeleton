@@ -1,8 +1,8 @@
-import os
+from os.path import join
 
 TEMPLATES = [{
     'BACKEND': 'django.template.backends.django.DjangoTemplates',
-    'DIRS': [os.path.join(PROJECT_DIR, 'templates')],
+    'DIRS': [join(PROJECT_DIR, 'templates')],
     'APP_DIRS': True,
     'OPTIONS': {
         'context_processors': [

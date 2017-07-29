@@ -1,4 +1,4 @@
-import os
+from os.path import join
 # import dj_database_url
 
 # Database
@@ -13,6 +13,6 @@ DATABASES = {
 DATABASES = {
     'default': {
         'ENGINE': 'django.db.backends.sqlite3',
-        'NAME': os.path.join(BASE_DIR, 'db.sqlite3'),
+        'NAME': join(BASE_DIR, 'db.sqlite3'),
     }
 }

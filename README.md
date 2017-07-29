@@ -22,6 +22,8 @@ How to:
 
 - "python configure_env.py"
 
+*Set your herokuapp url in settings/base/env.py*
+
 *Now do your stuff. When completed, deploy:*
 
 - "python deploy.py"

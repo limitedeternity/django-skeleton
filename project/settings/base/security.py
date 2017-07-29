@@ -1,8 +1,8 @@
 # SECURITY WARNING: keep the secret key used in production secret!
-import os
+from os import environ
 from django.utils.crypto import get_random_string
 
-SECRET_KEY = os.environ.get("SECRET_KEY", get_random_string(50, "abcdefghijklmnopqrstuvwxyz0123456789!@#$%^&*(-_=+)"))
+SECRET_KEY = environ.get("SECRET_KEY", get_random_string(50, "abcdefghijklmnopqrstuvwxyz0123456789!@#$%^&*(-_=+)"))
 ALLOWED_HOSTS = [HOST, '127.0.0.1']
 
 AUTH_PASSWORD_VALIDATORS = [

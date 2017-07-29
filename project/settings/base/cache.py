@@ -1,5 +1,6 @@
 '''
-import os
+from os import environ
+
 CACHES = {
     'default': {
         'BACKEND': 'django.core.cache.backends.memcached.MemcachedCache',
@@ -9,9 +10,9 @@ CACHES = {
 
 if PRODUCTION:
     CACHE_MIDDLEWARE_KEY_PREFIX = "project"
-    os.environ['MEMCACHE_SERVERS'] = os.environ.get('MEMCACHIER_SERVERS', '').replace(',', ';')
-    os.environ['MEMCACHE_USERNAME'] = os.environ.get('MEMCACHIER_USERNAME', '')
-    os.environ['MEMCACHE_PASSWORD'] = os.environ.get('MEMCACHIER_PASSWORD', '')
+    environ['MEMCACHE_SERVERS'] = environ.get('MEMCACHIER_SERVERS', '').replace(',', ';')
+    environ['MEMCACHE_USERNAME'] = environ.get('MEMCACHIER_USERNAME', '')
+    environ['MEMCACHE_PASSWORD'] = environ.get('MEMCACHIER_PASSWORD', '')
 
     CACHES = {
         'default': {

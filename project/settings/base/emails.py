@@ -1,14 +1,14 @@
 '''
-import os
+from os.environ
 
 EMAIL_BACKEND = 'django.core.mail.backends.smtp.EmailBackend'
-EMAIL_HOST_USER = os.environ.get('SENDGRID_USERNAME', "")
+EMAIL_HOST_USER = environ.get('SENDGRID_USERNAME', "")
 EMAIL_HOST = 'smtp.sendgrid.net'
 EMAIL_PORT = 25
 EMAIL_USE_TLS = False
-EMAIL_HOST_PASSWORD = os.environ.get('SENDGRID_PASSWORD', "")
+EMAIL_HOST_PASSWORD = environ.get('SENDGRID_PASSWORD', "")
 
-SERVER_EMAIL = u"{name} <noreply@{domain}>".format(
+SERVER_EMAIL = u"{name} <notifications@{domain}>".format(
     name='',
     domain=HOST,
 )
