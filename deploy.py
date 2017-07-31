@@ -1,9 +1,9 @@
 from subprocess import call
 
-call('git add .')
+call('git add .', shell=True)
 print("enter your git commit comment: ")
 comment = input()
-call('git commit -am "%s"' % comment)
-call('heroku maintenance:on')
-call('git push heroku master')
-call('heroku maintenance:off')
+call('git commit -am "%s"' % comment, shell=True)
+call('heroku maintenance:on', shell=True)
+call('git push heroku master', shell=True)
+call('heroku maintenance:off', shell=True)
